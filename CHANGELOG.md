@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/chenyueban/lint/compare/v0.1.3...v0.1.4) (2021-01-26)
+
+### Features
+
+- **eslint:** 添加了几条常用 rules ([cbf241a](https://github.com/chenyueban/lint/commit/cbf241a81f28f9c9b8e8a3875e353ef3162c5141))
+
 ### [0.1.3](https://github.com/chenyueban/lint/compare/v0.1.2...v0.1.3) (2021-01-26)
 
 ### Features
