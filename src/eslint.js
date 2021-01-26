@@ -26,7 +26,11 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier', 'react'],
   rules: {
     'prettier/prettier': 'error',
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    'react/prop-types': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 }

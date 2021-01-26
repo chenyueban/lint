@@ -21,10 +21,8 @@ yarn add @chenyueban/lint -D
 in `.eslintrc.js`
 
 ```js
-const config = require('@chenyueban/lint')
-
 module.exports = {
-  extends: [config.eslint],
+  extends: [require.resolve('@chenyueban/lint/src/eslint')],
 
   rules: {
     // your rules
