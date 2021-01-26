@@ -5,8 +5,7 @@ const path = require('path')
 
 const pkgUp = require('pkg-up')
 
-const EDITOR_CONFIG_CONTENT = `
-root = true
+const EDITOR_CONFIG_CONTENT = `root = true
 
 [*]
 indent_style = space
@@ -19,8 +18,7 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 `
-const ESLINTRC_CONTENT = `
-const config = require('@chenyueban/lint')
+const ESLINTRC_CONTENT = `const config = require('@chenyueban/lint')
 
 module.exports = {
   extends: [config.eslint],
@@ -30,8 +28,7 @@ module.exports = {
   },
 }
 `
-const PRETTIERRC_CONTENT = `
-const config = require('@chenyueban/lint')
+const PRETTIERRC_CONTENT = `const config = require('@chenyueban/lint')
 
 module.exports = {
   ...config.prettier,

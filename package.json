@@ -24,6 +24,9 @@
     "url": "https://github.com/chenyueban/lint/issues"
   },
   "homepage": "https://github.com/chenyueban/lint#readme",
+  "peerDependencies": {
+    "typescript": "^4.1.3"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
@@ -36,10 +39,12 @@
     "prettier": "^2.2.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
-    "standard-version": "^9.1.0"
+    "standard-version": "^9.1.0",
+    "typescript": "^4.1.3"
   },
   "publishConfig": {
     "access": "public"
@@ -50,12 +55,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["cross-env NODE_ENV=development eslint --cache"],
-    "{*.json,.{babelrc,eslintrc,prettierrc}}": [
+    "*.{js,ts}": ["cross-env NODE_ENV=development eslint --cache"],
+    "{*.json,.{eslintrc,prettierrc}}": [
       "prettier --ignore-path .eslintignore --parser json --write"
-    ],
-    "*.{css,scss}": [
-      "prettier --ignore-path .eslintignore --single-quote --write"
     ],
     "*.{html,md,yml}": [
       "prettier --ignore-path .eslintignore --single-quote --write"
