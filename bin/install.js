@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
 const fs = require('fs')
 const path = require('path')
@@ -20,10 +21,6 @@ trim_trailing_whitespace = false
 `
 const ESLINTRC_CONTENT = `module.exports = {
   extends: [require.resolve('@chenyueban/lint/src/eslint')],
-
-  rules: {
-    // your rules
-  },
 }
 `
 const PRETTIERRC_CONTENT = `const config = require('@chenyueban/lint')
