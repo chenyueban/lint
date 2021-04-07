@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/chenyueban/lint/compare/v0.1.5...v0.1.6) (2021-04-07)
+
+### Features
+
+- 加入 husky lint-staged 安装配置 ([eab268f](https://github.com/chenyueban/lint/commit/eab268f725d822791b6fc4bff4ac6795ac9e5b26))
+
 ### [0.1.5](https://github.com/chenyueban/lint/compare/v0.1.4...v0.1.5) (2021-03-15)
 
 ### [0.1.4](https://github.com/chenyueban/lint/compare/v0.1.3...v0.1.4) (2021-01-26)
