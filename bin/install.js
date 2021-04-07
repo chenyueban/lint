@@ -1,34 +1,26 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
 
 const fs = require('fs')
 const path = require('path')
-
 const pkgUp = require('pkg-up')
+const execa = require('execa')
+const chalk = require('chalk')
 
-const EDITOR_CONFIG_CONTENT = `root = true
+const {
+  EDITOR_CONFIG_CONTENT,
+  ESLINTRC_CONTENT,
+  PRETTIERRC_CONTENT,
+  LINT_STAGED_CONFIG_CONTENT,
+} = require('./raw')
 
-[*]
-indent_style = space
-indent_size = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.md]
-trim_trailing_whitespace = false
-`
-const ESLINTRC_CONTENT = `module.exports = {
-  extends: [require.resolve('@chenyueban/lint/src/eslint')],
+function log(...args) {
+  // eslint-disable-next-line no-console
+  console.log(chalk.yellow('[@chenyueban/lint]: '), chalk.cyan(args))
 }
-`
-const PRETTIERRC_CONTENT = `const config = require('@chenyueban/lint')
-
-module.exports = {
-  ...config.prettier,
+function error(...args) {
+  // eslint-disable-next-line no-console
+  console.error(chalk.yellow('[@chenyueban/lint]: '), chalk.red(args))
 }
-`
 
 async function main() {
   const cwd = path.join(__dirname, '..', '..')
@@ -41,18 +33,29 @@ async function main() {
   const editorConfigFile = path.join(pkgDir, '.editorconfig')
   const eslintRcJsFile = path.join(pkgDir, '.eslintrc.js')
   const prettierRcJsFile = path.join(pkgDir, '.prettierrc.js')
+  const lintStagedConfigFile = path.join(pkgDir, 'lint-staged.config.js')
 
+  // generate config files
   if (!fs.existsSync(editorConfigFile)) {
-    console.info(`@chenyueban/lint: auto generated ${editorConfigFile}`)
     fs.writeFileSync(editorConfigFile, EDITOR_CONFIG_CONTENT)
+    log(`auto generated ${editorConfigFile}`)
   }
   if (!fs.existsSync(eslintRcJsFile)) {
-    console.info(`@chenyueban/lint: auto generated ${eslintRcJsFile}`)
     fs.writeFileSync(eslintRcJsFile, ESLINTRC_CONTENT)
+    log(`auto generated ${eslintRcJsFile}`)
   }
   if (!fs.existsSync(prettierRcJsFile)) {
-    console.info(`@chenyueban/lint: auto generated ${prettierRcJsFile}`)
     fs.writeFileSync(prettierRcJsFile, PRETTIERRC_CONTENT)
+    log(`auto generated ${prettierRcJsFile}`)
+  }
+
+  // install husky
+  await execa('npm set-script prepare "husky install" && npm run prepare')
+  await execa('npx husky add .husky/pre-commit "npx lint-staged"')
+  // generate lint-staged config file
+  if (!fs.existsSync(lintStagedConfigFile)) {
+    fs.writeFileSync(lintStagedConfigFile, LINT_STAGED_CONFIG_CONTENT)
+    log(`auto generated ${lintStagedConfigFile}`)
   }
   return 0
 }
@@ -60,6 +63,6 @@ async function main() {
 main()
   .then(process.exit)
   .catch((e) => {
-    console.info(e)
+    error(e)
     process.exit(1)
   })
