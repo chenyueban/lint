@@ -50,7 +50,7 @@ async function main() {
   }
 
   // install husky
-  await execa('npm set-script prepare "husky install" && npm run prepare')
+  await execa('npx husky install')
   await execa('npx husky add .husky/pre-commit "npx lint-staged"')
   // generate lint-staged config file
   if (!fs.existsSync(lintStagedConfigFile)) {
