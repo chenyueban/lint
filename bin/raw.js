@@ -27,7 +27,8 @@ module.exports = {
 const LINT_STAGED_CONFIG_CONTENT = `module.exports = {
   '*.{js,jsx,less,sass,scss,md,json,yml,html}': ['prettier --write', 'git add'],
   '*.ts?(x)': ['prettier --parser=typescript --write', 'git add'],
-}`
+}
+`
 
 const HUSKY_SH_CONTENT = `#!/bin/sh
 if [ -z "$husky_skip_init" ]; then

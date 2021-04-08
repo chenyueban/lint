@@ -35,10 +35,10 @@ function install(baseDir) {
       throw error
     }
   } catch (e) {
-    error('Git hooks failed to install')
+    error('Husky failed to install')
     throw e
   }
-  log('Git hooks installed')
+  log('auto installed husky')
 
   const lintStagedConfigFile = path.join(baseDir, 'lint-staged.config.js')
   // generate lint-staged config file

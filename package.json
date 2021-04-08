@@ -15,7 +15,14 @@
     "type": "git",
     "url": "git+https://github.com/chenyueban/lint.git"
   },
-  "keywords": ["eslint", "prettier", "eslintConfig"],
+  "keywords": [
+    "eslint",
+    "prettier",
+    "eslintConfig",
+    "husky",
+    "lint-staged",
+    "git hooks"
+  ],
   "author": {
     "name": "chenyueban",
     "email": "jasonchan0527@gmail.com"
@@ -26,7 +33,10 @@
   },
   "homepage": "https://github.com/chenyueban/lint#readme",
   "peerDependencies": {
-    "typescript": "^4.1.3"
+    "eslint": "^7.23.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.21.0",
@@ -38,16 +48,16 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
     "pkg-up": "^3.1.0",
     "prettier": "^2.2.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "3.3.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "standard-version": "^9.2.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.2.4"
   },
   "publishConfig": {
     "access": "public"

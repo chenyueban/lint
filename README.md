@@ -9,9 +9,9 @@
 1. Install `@chenyueban/lint`
 
 ```sh
-npm install --save-dev @chenyueban/lint
+npm install --save-dev @chenyueban/lint eslint prettier husky lint-staged
 # or
-yarn add @chenyueban/lint -D
+yarn add @chenyueban/lint eslint prettier husky lint-staged -D
 ```
 
 2. It will automatically generate a .eslintrc.js/.prettierrc.js for you (if there's no such file before)

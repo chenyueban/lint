@@ -1,9 +1,4 @@
 module.exports = {
-  '*.{js,ts}': ['cross-env NODE_ENV=development eslint --cache'],
-  '{*.json,.{eslintrc,prettierrc}}': [
-    'prettier --ignore-path .eslintignore --parser json --write',
-  ],
-  '*.{html,md,yml}': [
-    'prettier --ignore-path .eslintignore --single-quote --write',
-  ],
+  '*.{js,jsx,less,sass,scss,md,json,yml,html}': ['prettier --write', 'git add'],
+  '*.ts?(x)': ['prettier --parser=typescript --write', 'git add'],
 }
