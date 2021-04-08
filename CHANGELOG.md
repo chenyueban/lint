@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/chenyueban/lint/compare/v0.2.0...v0.2.1) (2021-04-08)
+
+### Bug Fixes
+
+- **bin/husky.js:** 去除无用判断逻辑 ([327c555](https://github.com/chenyueban/lint/commit/327c555a020987f3c2452b36d22ee97e12fdcb66))
+
 ## [0.2.0](https://github.com/chenyueban/lint/compare/v0.1.7...v0.2.0) (2021-04-08)
 
 ### Features
