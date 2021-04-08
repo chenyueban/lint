@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/chenyueban/lint/compare/v0.1.6...v0.1.7) (2021-04-08)
+
+### Bug Fixes
+
+- **install.js:** 修复 husky install 的报错 ([c9277b2](https://github.com/chenyueban/lint/commit/c9277b286345c00742a4350e5f2b844c1e8c42ae))
+
 ### [0.1.6](https://github.com/chenyueban/lint/compare/v0.1.5...v0.1.6) (2021-04-07)
 
 ### Features
