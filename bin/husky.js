@@ -9,8 +9,10 @@ const {
 } = require('./raw')
 const { log, error } = require('./utils')
 
-function install(dir = '.husky') {
+function install(baseDir) {
   try {
+    const dir = path.join(baseDir, '.husky')
+
     // Create .husky/_
     fs.mkdirSync(path.join(dir, '_'), { recursive: true })
 
@@ -38,7 +40,7 @@ function install(dir = '.husky') {
   }
   log('Git hooks installed')
 
-  const lintStagedConfigFile = path.join(dir, 'lint-staged.config.js')
+  const lintStagedConfigFile = path.join(baseDir, 'lint-staged.config.js')
   // generate lint-staged config file
   if (!fs.existsSync(lintStagedConfigFile)) {
     fs.writeFileSync(lintStagedConfigFile, LINT_STAGED_CONFIG_CONTENT)
