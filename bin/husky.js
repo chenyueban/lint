@@ -10,14 +10,6 @@ const {
 const { log, error } = require('./utils')
 
 function install(dir = '.husky') {
-  // Custom dir help
-  const url = 'https://typicode.github.io/husky/#/?id=custom-directory'
-
-  // Ensure that cwd is git top level
-  if (!fs.existsSync('.git')) {
-    throw new Error(`.git can't be found (see ${url})`)
-  }
-
   try {
     // Create .husky/_
     fs.mkdirSync(path.join(dir, '_'), { recursive: true })
