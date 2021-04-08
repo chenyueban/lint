@@ -29,9 +29,49 @@ const LINT_STAGED_CONFIG_CONTENT = `module.exports = {
   '*.ts?(x)': ['prettier --parser=typescript --write', 'git add'],
 }`
 
+const HUSKY_SH_CONTENT = `#!/bin/sh
+if [ -z "$husky_skip_init" ]; then
+  debug () {
+    [ "$HUSKY_DEBUG" = "1" ] && echo "husky (debug) - $1"
+  }
+
+  readonly hook_name="$(basename "$0")"
+  debug "starting $hook_name..."
+
+  if [ "$HUSKY" = "0" ]; then
+    debug "HUSKY env variable is set to 0, skipping hook"
+    exit 0
+  fi
+
+  if [ -f ~/.huskyrc ]; then
+    debug "sourcing ~/.huskyrc"
+    . ~/.huskyrc
+  fi
+
+  export readonly husky_skip_init=1
+  sh -e "$0" "$@"
+  exitCode="$?"
+
+  if [ $exitCode != 0 ]; then
+    echo "husky - $hook_name hook exited with code $exitCode (error)"
+    exit $exitCode
+  fi
+
+  exit 0
+fi
+`
+
+const HUSKY_PRE_COMMIT_CONTENT = `#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx lint-staged
+`
+
 module.exports = {
   EDITOR_CONFIG_CONTENT,
   ESLINTRC_CONTENT,
   PRETTIERRC_CONTENT,
   LINT_STAGED_CONFIG_CONTENT,
+  HUSKY_SH_CONTENT,
+  HUSKY_PRE_COMMIT_CONTENT,
 }
