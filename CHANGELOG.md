@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/chenyueban/lint/compare/v0.2.2...v0.2.3) (2021-04-08)
+
+### Features
+
+- 调整依赖项 eslint prettier 移入 peerDependencies ([4df9022](https://github.com/chenyueban/lint/commit/4df90224086bb7cbc052e26d48a8a61a0f22da65))
+
 ### [0.2.2](https://github.com/chenyueban/lint/compare/v0.2.1...v0.2.2) (2021-04-08)
 
 ### Bug Fixes
