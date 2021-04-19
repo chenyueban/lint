@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/chenyueban/lint/compare/v0.2.3...v0.2.4) (2021-04-19)
+
+### Features
+
+- **eslint:** 新增 eslint rules 适配 react 17 ([aa71010](https://github.com/chenyueban/lint/commit/aa71010fac1ba1eb07a112f2504cc73255ac6a5c))
+
+### Bug Fixes
+
+- **husky:** 修复 husky 不生效 ([29d7508](https://github.com/chenyueban/lint/commit/29d750826ff24f7fbd0737433aa5f0db38cbb239))
+
 ### [0.2.3](https://github.com/chenyueban/lint/compare/v0.2.2...v0.2.3) (2021-04-08)
 
 ### Features
