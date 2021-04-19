@@ -31,5 +31,7 @@ module.exports = {
     'react/prop-types': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 }
