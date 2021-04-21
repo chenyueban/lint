@@ -5,6 +5,7 @@ const path = require('path')
 const {
   HUSKY_SH_CONTENT,
   HUSKY_PRE_COMMIT_CONTENT,
+  HUSKY_COMMIT_MSG_CONTENT,
   LINT_STAGED_CONFIG_CONTENT,
 } = require('./raw')
 const { log, error } = require('./utils')
@@ -26,6 +27,11 @@ function install(baseDir) {
 
     // Create .husky/pre-commit
     fs.writeFileSync(path.join(dir, 'pre-commit'), HUSKY_PRE_COMMIT_CONTENT, {
+      encoding: 'utf-8',
+    })
+
+    // Create .husky/commit-msg
+    fs.writeFileSync(path.join(dir, 'commit-msg'), HUSKY_COMMIT_MSG_CONTENT, {
       encoding: 'utf-8',
     })
 

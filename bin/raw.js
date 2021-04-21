@@ -30,6 +30,11 @@ const LINT_STAGED_CONFIG_CONTENT = `module.exports = {
 }
 `
 
+const COMMITLINT_CONFIG_CONTENT = `module.exports = {
+  extends: ['@commitlint/config-conventional'],
+}
+`
+
 const HUSKY_SH_CONTENT = `#!/bin/sh
 if [ -z "$husky_skip_init" ]; then
   debug () {
@@ -68,11 +73,19 @@ const HUSKY_PRE_COMMIT_CONTENT = `#!/bin/sh
 npx lint-staged
 `
 
+const HUSKY_COMMIT_MSG_CONTENT = `#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit "$1"
+`
+
 module.exports = {
   EDITOR_CONFIG_CONTENT,
   ESLINTRC_CONTENT,
   PRETTIERRC_CONTENT,
   LINT_STAGED_CONFIG_CONTENT,
+  COMMITLINT_CONFIG_CONTENT,
   HUSKY_SH_CONTENT,
   HUSKY_PRE_COMMIT_CONTENT,
+  HUSKY_COMMIT_MSG_CONTENT,
 }
