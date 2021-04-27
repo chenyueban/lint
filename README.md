@@ -1,7 +1,6 @@
 # lint
 
 [![NPM Version](https://badge.fury.io/js/%40chenyueban%2Flint.svg)](https://www.npmjs.com/package/@chenyueban/lint)
-[![npm (tag)](https://img.shields.io/npm/v/%40chenyueban/lint/next.svg)](https://www.npmjs.com/package/@chenyueban/lint?activeTab=versions)
 [![NPM](https://github.com/chenyueban/lint/workflows/NPM/badge.svg)](https://github.com/chenyueban/lint/actions?query=workflow%3ANPM)
 
 ## USAGE
@@ -9,12 +8,12 @@
 1. Install `@chenyueban/lint`
 
 ```sh
-npm install --save-dev @chenyueban/lint eslint prettier husky lint-staged
+npm install --save-dev @chenyueban/lint
 # or
-yarn add @chenyueban/lint eslint prettier husky lint-staged -D
+yarn add @chenyueban/lint -D
 ```
 
-2. It will automatically generate a .eslintrc.js/.prettierrc.js for you (if there's no such file before)
+2. It will automatically generate a .eslintrc.js/.prettierrc.js/lint-staged.config.js/.husky/commitlint.config.js for you (if there's no such file before)
 
 3. You can customize the rules
 
@@ -38,4 +37,20 @@ const config = require('@chenyueban/lint')
 module.exports = {
   ...config.prettier,
 }
+```
+
+in `lint-staged.config.js`
+
+```js
+module.exports = {
+  '*.{js,jsx,less,sass,scss,md,json,yml,html}': ['prettier --write', 'git add'],
+  '*.ts?(x)': ['prettier --parser=typescript --write', 'git add'],
+}
+```
+
+Mac os may not execute lint, please execute the following command:
+
+```bash
+chmod ug+x .husky/*
+chmod ug+x .git/hooks/*
 ```
