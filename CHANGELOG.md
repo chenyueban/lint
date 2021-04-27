@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/chenyueban/lint/compare/v0.2.6...v0.2.7) (2021-04-27)
+
+### Features
+
+- **lint-staged:** 更新 lint-staged 配置 启用 eslint ([6e3e63e](https://github.com/chenyueban/lint/commit/6e3e63ec70a1f4abbb81d232fd9ccf43e4133f08))
+
 ### [0.2.6](https://github.com/chenyueban/lint/compare/v0.2.5...v0.2.6) (2021-04-25)
 
 ### [0.2.5](https://github.com/chenyueban/lint/compare/v0.2.4...v0.2.5) (2021-04-21)
