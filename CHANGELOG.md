@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/chenyueban/lint/compare/v0.2.7...v0.2.8) (2021-04-27)
+
+### Features
+
+- 更新 eslint 配置 使用 airbnb ([213a882](https://github.com/chenyueban/lint/commit/213a882e66cd74de80468e7b1675c23a209d3997))
+
 ### [0.2.7](https://github.com/chenyueban/lint/compare/v0.2.6...v0.2.7) (2021-04-27)
 
 ### Features
