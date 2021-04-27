@@ -5,12 +5,12 @@ function log(...args) {
   console.log(chalk.yellow('[@chenyueban/lint]: '), chalk.cyan(args))
 }
 
-function error(...args) {
+function warn(...args) {
   // eslint-disable-next-line no-console
-  console.error(chalk.yellow('[@chenyueban/lint]: '), chalk.red(args))
+  console.warn(chalk.yellow('[@chenyueban/lint]: '), chalk.red(args))
 }
 
 module.exports = {
   log,
-  error,
+  warn,
 }

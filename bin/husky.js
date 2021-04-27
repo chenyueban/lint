@@ -8,7 +8,7 @@ const {
   HUSKY_COMMIT_MSG_CONTENT,
   LINT_STAGED_CONFIG_CONTENT,
 } = require('./raw')
-const { log, error } = require('./utils')
+const { log, warn } = require('./utils')
 
 function install(baseDir) {
   try {
@@ -41,7 +41,7 @@ function install(baseDir) {
       throw error
     }
   } catch (e) {
-    error('Husky failed to install')
+    warn('Husky failed to install')
     throw e
   }
   log('auto installed husky')

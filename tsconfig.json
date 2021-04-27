@@ -1,0 +1,4 @@
+{
+  "extends": "@chenyueban/tsconfig",
+  "exclude": ["node_modules/"]
+}
