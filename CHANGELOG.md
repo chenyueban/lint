@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/chenyueban/lint/compare/v0.2.9...v0.2.10) (2021-04-28)
+
+### Bug Fixes
+
+- **eslint:** 修复 eslint typescript 不生效问题 ([571d4e3](https://github.com/chenyueban/lint/commit/571d4e339305fe6742eb74dbed42bd8f89769861))
+
 ### [0.2.9](https://github.com/chenyueban/lint/compare/v0.2.8...v0.2.9) (2021-04-28)
 
 ### Bug Fixes
