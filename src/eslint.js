@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   env: {
     browser: true,
@@ -7,8 +9,7 @@ module.exports = {
   extends: ['airbnb-typescript', 'prettier'],
   plugins: ['@typescript-eslint', 'prettier', 'react'],
   parserOptions: {
-    requireConfigFile: false,
-    project: './tsconfig.json',
+    project: path.resolve(process.cwd(), 'tsconfig.json'),
   },
   rules: {
     'prettier/prettier': 'error',
