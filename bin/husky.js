@@ -17,22 +17,22 @@ function install(baseDir) {
     // Create .husky/_
     fs.mkdirSync(path.join(dir, '_'), { recursive: true })
 
-    // Create .husky/.gitignore
-    fs.writeFileSync(path.join(dir, '.gitignore'), '_\n')
-
     // Create .husky/_/husky.sh
     fs.writeFileSync(path.join(dir, '_/husky.sh'), HUSKY_SH_CONTENT, {
       encoding: 'utf-8',
+      mode: 0o0755,
     })
 
     // Create .husky/pre-commit
     fs.writeFileSync(path.join(dir, 'pre-commit'), HUSKY_PRE_COMMIT_CONTENT, {
       encoding: 'utf-8',
+      mode: 0o0755,
     })
 
     // Create .husky/commit-msg
     fs.writeFileSync(path.join(dir, 'commit-msg'), HUSKY_COMMIT_MSG_CONTENT, {
       encoding: 'utf-8',
+      mode: 0o0755,
     })
 
     // Configure repo
