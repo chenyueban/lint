@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.12](https://github.com/chenyueban/lint/compare/v0.2.11...v0.2.12) (2021-05-31)
+
+### Features
+
+- **husky:** 删除生成 .gitignore 以及创建的文件赋予对应权限 ([568db5e](https://github.com/chenyueban/lint/commit/568db5e4bacaeae699b87fe064fb69659ba70516))
+
 ### [0.2.11](https://github.com/chenyueban/lint/compare/v0.2.10...v0.2.11) (2021-04-29)
 
 ### Features
