@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.13](https://github.com/chenyueban/lint/compare/v0.2.12...v0.2.13) (2021-05-31)
+
+### Bug Fixes
+
+- **package.json:** 回退 scripts prepare 设置 ([9eb4ce6](https://github.com/chenyueban/lint/commit/9eb4ce6079a8a3cb680e87147490e32b4f75f56a))
+
 ### [0.2.12](https://github.com/chenyueban/lint/compare/v0.2.11...v0.2.12) (2021-05-31)
 
 ### Features
