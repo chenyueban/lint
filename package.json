@@ -6,6 +6,7 @@
   "scripts": {
     "dist": "echo dist",
     "postinstall": "node bin/install.js",
+    "prepare": "husky install",
     "lint": "eslint src/**/*.js",
     "update:deps": "yarn upgrade-interactive --latest",
     "release": "standard-version"
