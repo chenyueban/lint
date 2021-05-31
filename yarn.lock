@@ -46,9 +46,9 @@
     regenerator-runtime "^0.13.4"
 
 "@chenyueban/tsconfig@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.npmjs.org/@chenyueban/tsconfig/-/tsconfig-0.1.7.tgz#7a02a89eefde73fa730ca8d8dc141f4c3cb80784"
-  integrity sha512-ZXrF9sXnLxoH2w3JzjWhJVa8QvfyqLX/dXxWm95lNJ91hSwUwnC/LWy5ks6V2ZQJs5G9K9VYEVK8UcztYKqxkw==
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@chenyueban/tsconfig/-/tsconfig-0.1.8.tgz#b359c20651b5f192abe44534d4dcacbcaf4523b6"
+  integrity sha512-F3gZ2EQCqmx88jyKpbe8r+vD+j94ucFV/yXPT3tBS/f69JAvP7rLsuKpj7/IrfLhtRYOThHkQtP5EEdCeVnsHw==
   dependencies:
     pkg-up "^3.1.0"
 
